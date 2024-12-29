@@ -2,10 +2,25 @@ import random
 
 def number_guessing_game():
     print("Welcome to the Number Guessing Game!")
-    print("I have chosen a number between 1 and 100. Can you guess it?")
+    print("Choose a difficulty level:")
+    print("1. Easy (Number between 1 and 50)")
+    print("2. Medium (Number between 1 and 100)")
+    print("3. Hard (Number between 1 and 200)")
     
-    # Generate a random number between 1 and 100
-    secret_number = random.randint(1, 100)
+    # Get difficulty level from the user
+    difficulty = input("Enter difficulty (easy, medium, hard): ").lower()
+    
+    # Set the range based on difficulty level
+    if difficulty == "easy":
+        secret_number = random.randint(1, 50)
+        print("You selected Easy mode. Guess the number between 1 and 50.")
+    elif difficulty == "hard":
+        secret_number = random.randint(1, 200)
+        print("You selected Hard mode. Guess the number between 1 and 200.")
+    else:
+        secret_number = random.randint(1, 100)
+        print("You selected Medium mode (default). Guess the number between 1 and 100.")
+
     attempts = 0
 
     while True:
