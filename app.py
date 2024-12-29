@@ -7,7 +7,7 @@ def number_guessing_game():
     print("2. Medium (Number between 1 and 100)")
     print("3. Hard (Number between 1 and 200)")
     
-    # Get difficulty level from the user
+    # Get difficulty level from the user.....
     difficulty = input("Enter difficulty (easy, medium, hard): ").lower()
     
     # Set the range based on difficulty level
